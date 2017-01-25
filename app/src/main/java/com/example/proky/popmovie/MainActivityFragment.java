@@ -215,7 +215,7 @@ public class MainActivityFragment extends Fragment {
             // Will contain the raw JSON response as a string
             String filmsJsonStr = null;
             // API key which is needed to get response from the server
-            String api_key = "0b032967d90ed255bad3d6c1a9ec177b";
+            String api_key = "";
             //String lang_russian = "ru";
             //String lang_english = "en-US";
 
