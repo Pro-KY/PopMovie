@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- arrays related with SORTING preferences -->
+    <string-array name="pref_sorting_keys">
+        <item> @string/pref_sort_key_most_popular </item>
+        <item> @string/pref_sort_key_top_rated </item>
+    </string-array>
+
+    <string-array name="pref_sorting_values">
+        <item> @string/pref_sort_value_most_popular </item>
+        <item> @string/pref_sort_value_top_rated </item>
+    </string-array>
+
+    <!-- arrays related with LANGUAGE preferences -->
+    <string-array name="pref_language_keys">
+        <item> @string/pref_lang_key_russian </item>    <!-- Russian -->
+        <item> @string/pref_lang_key_english </item>    <!-- English -->
+    </string-array>
+
+    <string-array name="pref_language_values">
+        <item> @string/pref_lang_value_russian </item>  <!-- ru -->
+        <item> @string/pref_lang_value_english </item>  <!-- en-US -->
+    </string-array>
+</resources>

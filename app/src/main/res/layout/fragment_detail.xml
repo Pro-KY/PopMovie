@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEEEEE">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetailActivity$DetailFragment">
+
+        <ProgressBar
+            android:id="@+id/loadingCircleDetail"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="120dp"
+            android:scrollbarStyle="insideInset"
+            android:indeterminate="true" />
+        <!--
+         android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"-->
+
+        <LinearLayout
+            android:id="@+id/childLinearLayout"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context="com.example.proky.popmovie.DetailActivity$DetailFragment">
+
+            <!-- Film title -->
+            <TextView
+                android:id="@+id/film_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:textSize="28sp"
+                android:textColor="#fff"
+                android:background="#1f1f1f"
+                android:gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <!-- Poster and film attributes -->
+            <LinearLayout
+                android:id="@+id/filmAttrLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp">
+
+                <ImageView
+                    android:id="@+id/film_poster"
+                    android:layout_width="130dp"
+                    android:layout_height="170dp"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/release_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:id="@+id/duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:id="@+id/film_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Film Description -->
+            <TextView
+                android:id="@+id/film_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="-6dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center"/>
+
+        <!-- TRAILERS -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_list"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <!-- Trailers title -->
+            <TextView
+                android:id="@+id/trailers_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/trailers_title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Horizontal line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Trailer1 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/playButton_1"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:padding="4dp"
+                    android:src="@drawable/selector"
+                    android:background="#00ffffff"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/trailer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:text="@string/first_trailer" />
+            </LinearLayout>
+
+
+            <!-- Horizontal line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Trailer2 -->
+            <LinearLayout
+                android:id="@+id/secondTrailerLayout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/playButton_2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:padding="4dp"
+                    android:src="@drawable/selector"
+                    android:background="#00ffffff"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/trailer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/second_trailer" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- REVIEWS -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_list"
+            android:layout_margin="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/reviews_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="-10dp"
+                android:text="@string/reviews_title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/no_reviews_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_margin="5dp"/>
+
+            <!-- A RecyclerView with some commonly used attributes -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

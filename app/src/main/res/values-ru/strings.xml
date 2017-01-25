@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ПопМуви</string>
+    <string name="first_trailer">Трейлер 1:</string>
+    <string name="no_reviews_message">Нету отзывов.</string>
+    <string name="duration">Продолжительность: %1$s</string>
+    <string name="action_settings">Настройки</string>
+    <string name="pref_language_label">Язык</string>
+    <string name="pref_sort_key_most_popular">Наиболее популярные</string>
+    <string name="pref_sort_key_top_rated">Самый высокий рейтинг</string>
+    <string name="pref_lang_key_russian">Русский</string>
+    <string name="pref_lang_key_english">Английский</string>
+    <string name="pref_sorting_label">Сортировка</string>
+    <string name="rating">Рейтинг: %1$s</string>
+    <string name="release_date">Выпущенный: \n%1$s</string>
+    <string name="reviews_title">Отзывы:</string>
+    <string name="second_trailer">Трейлер 2:</string>
+    <string name="title_activity_detail">Детали</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="trailers_title">Трейлеры:</string>
+</resources>

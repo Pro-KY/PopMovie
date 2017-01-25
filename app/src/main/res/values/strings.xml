@@ -1,0 +1,48 @@
+<resources>
+    <!-- General -->
+    <string name="app_name"> PopMovie </string>
+    <string name="action_settings"> Settings </string>
+    <!-- Activities titles -->
+    <string name="title_activity_detail">Details</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- key-value array pair of SORTING List preference -->
+    <string name="pref_sorting_label"> Sorting </string>
+    <string name="pref_sorting_key" translatable="false"> sorting </string>
+    <!-- keys -->
+    <string name="pref_sort_key_most_popular"> Most Popular </string>
+    <string name="pref_sort_key_top_rated"> Top Rated </string>
+    <!-- values -->
+    <string name="pref_sort_value_most_popular" translatable="false"> popular? </string>
+    <string name="pref_sort_value_top_rated" translatable="false">  top_rated? </string>
+
+    <string name="pref_sort_value_default" translatable="false"> popular? </string>
+
+    <!-- key-value array pair of LANGUAGE List preference -->
+    <string name="pref_language_label"> Language </string>
+    <string name="pref_language_key" translatable="false"> language </string>
+    <!-- keys -->
+    <string name="pref_lang_key_english"> English </string>
+    <string name="pref_lang_key_russian"> Russian </string>
+    <!-- values -->
+    <string name="pref_lang_value_english" translatable="false"> en-US </string>
+    <string name="pref_lang_value_russian" translatable="false">  ru </string>
+    <string name="pref_lang_value_default" translatable="false"> ru </string>
+
+    <!-- Context references -->
+    <string name="detail_fragment_context" translatable="false"> com.example.proky.popmovie.DetailActivity.DetailFragment </string>
+
+    <!-- Film detail description -->
+    <string name="release_date"> Released: \n%1$s </string>
+    <string name="duration"> Duration: %1$s </string>
+    <string name="rating"> Rating: %1$s </string>
+
+    <!--No reviews message -->
+    <string name="no_reviews_message"> There are no reviews =( </string>
+
+    <string name="trailers_title"> Trailers:  </string>
+    <string name="first_trailer">  Trailer 1: </string>
+    <string name="second_trailer"> Trailer 2: </string>
+    <string name="reviews_title">  Reviews:   </string>
+
+</resources>
