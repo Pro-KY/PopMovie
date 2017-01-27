@@ -43,8 +43,8 @@ public class MoviesContract {
         // movie id provided by API, stored as integer
         public static final String COLUMN_MOVIE_ID = "movie_id";
 
-        // Column with the foreign key into the review table.
-        public static final String COLUMN_REV_KEY = "review_id";
+        // Column with the foreign key into the comment table.
+        public static final String COLUMN_COMM_KEY = "comment_id";
 
         // movie title provided by API, stored as string
         public static final String COLUMN_TITLE = "title";
