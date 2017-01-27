@@ -52,6 +52,13 @@ public class MoviesDbHelper extends SQLiteOpenHelper {
                 " FOREIGN KEY (" + MovieEntry.COLUMN_COMM_KEY + ") REFERENCES " +
                 CommentEntry.TABLE_NAME + " (" + CommentEntry._ID + ") ";
 
+        // Create a table to hold movie comments.
+        final String SQL_CREATE_COMMENT_TABLE = "CREATE TABLE " + CommentEntry.TABLE_NAME + " (" +
+                CommentEntry._ID + " INTEGER PRIMARY KEY," +
+
+                CommentEntry.COLUMN_AUTHOR + " TEXT, " +
+                CommentEntry.COLUMN_COMMENT + " TEXT, " +
+                " );";
 
     }
 }

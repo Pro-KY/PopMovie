@@ -97,8 +97,10 @@ public class MoviesContract {
 
         public static final String TABLE_NAME = "comments";
 
+        // movie author nickname provided by API, stored as string
         public static final String COLUMN_AUTHOR = "author";
-        public static final String COLUMN_CONTEXT = "comment";
+        // movie comment provided by author, stored as string
+        public static final String COLUMN_COMMENT = "comment";
 
         public static Uri buildCommentUri(long id) {
             return ContentUris.withAppendedId(CONTENT_URI, id);
