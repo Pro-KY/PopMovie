@@ -6,9 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.proky.popmovie.data.MoviesContract.MovieEntry;
 import com.example.proky.popmovie.data.MoviesContract.CommentEntry;
 
-import static android.os.Build.VERSION_CODES.M;
-import static com.example.proky.popmovie.data.MoviesContract.MovieEntry.COLUMN_REV_KEY;
-
 
 /**
  *  Manages a local database for weather data
@@ -53,12 +50,25 @@ public class MoviesDbHelper extends SQLiteOpenHelper {
                 CommentEntry.TABLE_NAME + " (" + CommentEntry._ID + ") ";
 
         // Create a table to hold movie comments.
-        final String SQL_CREATE_COMMENT_TABLE = "CREATE TABLE " + CommentEntry.TABLE_NAME + " (" +
+        final String SQL_CREATE_COMMENTS_TABLE = "CREATE TABLE " + CommentEntry.TABLE_NAME + " (" +
                 CommentEntry._ID + " INTEGER PRIMARY KEY," +
 
                 CommentEntry.COLUMN_AUTHOR + " TEXT, " +
                 CommentEntry.COLUMN_COMMENT + " TEXT, " +
                 " );";
 
+        sqLiteDatabase.execSQL(SQL_CREATE_MOVIES_TABLE);
+        sqLiteDatabase.execSQL(SQL_CREATE_COMMENTS_TABLE);
+
     }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
+        // This database is only a cache for online data, so its upgrade policy is
+        // to simply to discard the data and start over
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + MovieEntry.TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + CommentEntry.TABLE_NAME);
+        onCreate(sqLiteDatabase);
+    }
+
 }
