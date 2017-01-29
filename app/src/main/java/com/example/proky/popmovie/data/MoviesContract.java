@@ -74,7 +74,7 @@ public class MoviesContract {
         // part of link to a movie trailer provided by API, stored as string
         public static final String COLUMN_TRAILER_KEY_2 = "second_trailer_key";
 
-        public static Uri buildMovieUri(long id) {
+        public static Uri buildMoviesUri(long id) {
             return ContentUris.withAppendedId(CONTENT_URI, id);
         }
 
@@ -102,7 +102,7 @@ public class MoviesContract {
         // movie comment provided by author, stored as string
         public static final String COLUMN_COMMENT = "comment";
 
-        public static Uri buildCommentUri(long id) {
+        public static Uri buildCommentsUri(long id) {
             return ContentUris.withAppendedId(CONTENT_URI, id);
         }
     }
