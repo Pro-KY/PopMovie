@@ -49,10 +49,6 @@ public class MoviesContract {
         // movie title provided by API, stored as string
         public static final String COLUMN_TITLE = "title";
 
-        // The location setting string is what will be sent to www.themoviedb.org/
-        // as the location query, stored as string.
-        public static final String COLUMN_SORTING = "sorting";
-
         // Poster path provided by API, stored as string
         public static final String COLUMN_POSTER = "poster_path";
 

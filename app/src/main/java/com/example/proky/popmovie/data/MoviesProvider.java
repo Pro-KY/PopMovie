@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.util.Log;
 
@@ -19,6 +20,23 @@ public class MoviesProvider extends ContentProvider {
 
     static final int MOVIES = 100;
     static final int COMMENTS = 200;
+
+    private static final SQLiteQueryBuilder sMovieWithCommentQueryBuilder;
+
+    // Static constructor of the class
+    static {
+        sMovieWithCommentQueryBuilder = new SQLiteQueryBuilder();
+
+        //This is an inner join which looks like
+        //movies INNER JOIN comments ON movies.comment_id = comments._id
+        sMovieWithCommentQueryBuilder.setTables(
+                MoviesContract.MovieEntry.TABLE_NAME + " INNER JOIN " +
+                        MoviesContract.CommentEntry.TABLE_NAME +
+                        " ON " + MoviesContract.MovieEntry.TABLE_NAME +
+                        "." + MoviesContract.MovieEntry.COLUMN_COMM_KEY +
+                        " = " + MoviesContract.CommentEntry.TABLE_NAME +
+                        "." + MoviesContract.CommentEntry._ID);
+    }
 
     @Override
     public boolean onCreate() {

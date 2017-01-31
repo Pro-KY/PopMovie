@@ -40,9 +40,6 @@ public class MoviesDbHelper extends SQLiteOpenHelper {
                 MovieEntry.COLUMN_TRAILER_KEY_1 + " TEXT NOT NULL, " +
                 MovieEntry.COLUMN_TRAILER_KEY_2 + " TEXT, " +
 
-                MovieEntry.COLUMN_SORTING + " TEXT NOT NULL, " +
-                MovieEntry.COLUMN_SORTING + " TEXT NOT NULL, " +
-
                 MovieEntry.COLUMN_COMM_KEY + " INTEGER NOT NULL, " +
 
                 // Set up the comment_id column as a foreign key to comments table.
